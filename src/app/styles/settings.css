@@ -1,0 +1,137 @@
+/* Settings Page Styles */
+.settings-form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.settings-section {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.settings-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.setting-group {
+    margin-bottom: 20px;
+}
+
+.setting-group:last-child {
+    margin-bottom: 0;
+}
+
+.setting-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.setting-group input[type="text"],
+.setting-group input[type="password"],
+.setting-group input[type="number"],
+.setting-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 14px;
+    transition: border-color 0.2s ease;
+}
+
+.setting-group input[type="text"]:focus,
+.setting-group input[type="password"]:focus,
+.setting-group input[type="number"]:focus,
+.setting-group select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.setting-group input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.setting-description {
+    margin-top: 5px;
+    font-size: 12px;
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+/* Activity Type Group */
+.setting-group.activity {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    align-items: start;
+}
+
+/* Save Button */
+#save-settings {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 20px;
+}
+
+#save-settings:hover:not(:disabled) {
+    background-color: #5b6eae;
+}
+
+#save-settings:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Settings Notice */
+.settings-notice {
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.settings-notice.warning {
+    background-color: rgba(250, 166, 26, 0.2);
+    border: 1px solid var(--warning-color);
+    color: var(--warning-color);
+}
+
+.settings-notice.error {
+    background-color: rgba(240, 71, 71, 0.2);
+    border: 1px solid var(--error-color);
+    color: var(--error-color);
+}
+
+.settings-notice.success {
+    background-color: rgba(67, 181, 129, 0.2);
+    border: 1px solid var(--success-color);
+    color: var(--success-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .settings-form {
+        padding: 10px;
+    }
+
+    .setting-group.activity {
+        grid-template-columns: 1fr;
+    }
+}
